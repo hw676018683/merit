@@ -17,6 +17,7 @@ module Merit
         rule.block = block
         rule.category = options.fetch(:category) { :default }
         rule.model_name = options[:model_name] if options[:model_name]
+        rule.log = options[:log]
 
         actions.each do |action|
           defined_rules[action] ||= []

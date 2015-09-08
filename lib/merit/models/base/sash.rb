@@ -34,6 +34,7 @@ module Merit
       def add_points(num_points, options = {})
         point = Merit::Score::Point.new
         point.num_points = num_points
+        point.log = options[:log]
         scores
           .where(category: options[:category] || 'default')
           .first_or_create
