@@ -74,7 +74,7 @@ module Merit
     end
 
     def check_mongoid_id(id)
-      id.to_s =~ /^[0-9a-fA-F]{24}$/
+      true
     end
   end
 end
